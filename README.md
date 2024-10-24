@@ -98,5 +98,6 @@ Edge Case Handling: If no trigrams are found that match the last two characters,
 
 Running in Jupyter Notebook
 This task is implemented inside a Jupyter Notebook (trigrams.ipynb), which allows for step-by-step code execution along with explanations using Markdown cells. You can run each step individually to observe the intermediate outputs before generating the full string.
+
 **TASK 2 END**
 
