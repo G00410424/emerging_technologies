@@ -50,6 +50,7 @@ Multiple Files: The code processes multiple files by looping through a list of f
 **TASK 1 END**
 
 **TASK 2 START**
+
 Task 2: Third-Order Letter Approximation Generation
 Overview
 In Task 2, we generate a string of 10,000 characters based on the trigram model built in Task 1. This string is generated using a third-order approximation of the English language, where each character in the string is determined by the last two characters using the trigram model.
