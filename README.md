@@ -4,9 +4,7 @@
 
 Please find below more about each task:
 
-**TASK 1 START**
-
-Task 1: Trigram Model Creation
+**Task 1: Trigram Model Creation**
 Overview
 This project is part of Task 1 of a larger assignment, where the goal is to create a third-order letter approximation model (also known as a trigram model) based on English texts. The model uses sequences of three characters (trigrams) to analyze and generate text based on the frequency of those sequences in a given dataset of books.
 
@@ -41,17 +39,14 @@ read_file(file_path): Reads the content of a book file from a given file path.
 clean_text(text): Removes unwanted characters from the text and converts it to uppercase.
 remove_preamble_postamble(text): Removes the Project Gutenberg preamble and postamble from the text.
 build_trigram_model(text): Builds a trigram model by counting how often each sequence of three characters appears in the cleaned text.
-Main loop: Iterates over the five book files, applies the functions, and outputs the results.
+Main loop:
+Iterates over the five book files, applies the functions, and outputs the results.
 Design Decisions
 Data Structures: A defaultdict(int) from the collections module was chosen to store the trigrams because it automatically initializes the count of unseen trigrams to 0.
 Text Processing: Regular expressions (re.sub) were used to clean the text by removing non-letter characters.
 Multiple Files: The code processes multiple files by looping through a list of file paths, making it scalable and modular.
 
-**TASK 1 END**
-
-**TASK 2 START**
-
-Task 2: Third-Order Letter Approximation Generation
+**Task 2: Third-Order Letter Approximation Generation**
 Overview
 In Task 2, we generate a string of 10,000 characters based on the trigram model built in Task 1. This string is generated using a third-order approximation of the English language, where each character in the string is determined by the last two characters using the trigram model.
 
@@ -68,12 +63,10 @@ task2_trigrams.py: This script contains the following key functions:
 weighted_random_choice(): This function selects the next character based on the previous two characters, using the trigram model. The selection is weighted by the frequency of the trigrams.
 generate_string(): This function generates a string of 10,000 characters, starting with "TH" and repeatedly selecting the next character using the trigram model.
 Functions
-weighted_random_choice(trigram_model, last_two_chars):
+weighted_random_choice(trigram_model, last_two_chars): This function takes the trigram model and the last two characters of the generated string, then uses a weighted random choice to select the next character. Trigrams that start with the given two characters are found, and the next character is selected based on the frequency of those trigrams in the model.
 
-This function takes the trigram model and the last two characters of the generated string, then uses a weighted random choice to select the next character. Trigrams that start with the given two characters are found, and the next character is selected based on the frequency of those trigrams in the model.
-generate_string(trigram_model, start_string="TH", length=10000):
+generate_string(trigram_model, start_string="TH", length=10000): This function generates a string of the given length. It starts with "TH" and uses the trigram model to generate each subsequent character. The process continues until the generated string reaches 10,000 characters.
 
-This function generates a string of the given length. It starts with "TH" and uses the trigram model to generate each subsequent character. The process continues until the generated string reaches 10,000 characters.
 Example Usage
 Here’s an example of how the string is generated using the trigram model:
 
@@ -91,13 +84,35 @@ Copy code
 generated_text = generate_string(trigram_model)
 print(generated_text[:1000])  # View the first 1000 characters for inspection
 The generated string will follow the patterns observed in the input text, and it will be different each time the script is run due to the random selection process.
+
 Design Decisions
 Weighted Random Selection: The random.choices() function is used for selecting the next character in the string. The weights for each possible next character are based on how frequently that trigram appears in the model.
 
 Edge Case Handling: If no trigrams are found that match the last two characters, the generation process appends "TH" to restart the process, ensuring that string generation doesn’t stop.
 
-Running in Jupyter Notebook
-This task is implemented inside a Jupyter Notebook (trigrams.ipynb), which allows for step-by-step code execution along with explanations using Markdown cells. You can run each step individually to observe the intermediate outputs before generating the full string.
+Task 3: Analyze the Trigram Model
+Overview
+In Task 3, we analyze the 10,000-character string generated in Task 2 by comparing it to a list of valid English words from the words.txt file. This file contains a comprehensive list of English words, which we use to determine how many of the words in our generated string are actual English words.
 
-**TASK 2 END**
+The task involves:
+
+Extracting words from the generated string.
+Comparing these words to the list of valid words in words.txt.
+Calculating the percentage of valid words found in the generated string.
+Files and Structure
+words.txt: A file containing a list of valid English words, which we will use for comparison.
+trigrams.ipynb: The Jupyter Notebook containing all the tasks (including Task 3), where we:
+Load the words.txt file.
+Extract words from the generated string.
+Compare these words to valid words and calculate the percentage of valid English words.
+Steps
+Place the words.txt file in the root of the project directory.
+Run the notebook (trigrams.ipynb) or script to:
+Load words.txt.
+Extract words from the generated string.
+Calculate the percentage of valid English words.
+Design Decisions
+Using a Set for Fast Lookup: We stored the valid words from words.txt in a Python set because lookups in a set are much faster than in a list. This allows us to efficiently compare a large number of words.
+
+Regular Expression for Word Extraction: The re.findall() function was used to extract words by matching sequences of alphabetic characters, ignoring any punctuation or special characters.
 
