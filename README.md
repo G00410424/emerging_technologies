@@ -5,6 +5,7 @@
 Please find below more about each task:
 
 **Task 1: Trigram Model Creation**
+
 Overview
 This project is part of Task 1 of a larger assignment, where the goal is to create a third-order letter approximation model (also known as a trigram model) based on English texts. The model uses sequences of three characters (trigrams) to analyze and generate text based on the frequency of those sequences in a given dataset of books.
 
@@ -47,6 +48,7 @@ Text Processing: Regular expressions (re.sub) were used to clean the text by rem
 Multiple Files: The code processes multiple files by looping through a list of file paths, making it scalable and modular.
 
 **Task 2: Third-Order Letter Approximation Generation**
+
 Overview
 In Task 2, we generate a string of 10,000 characters based on the trigram model built in Task 1. This string is generated using a third-order approximation of the English language, where each character in the string is determined by the last two characters using the trigram model.
 
@@ -90,7 +92,8 @@ Weighted Random Selection: The random.choices() function is used for selecting t
 
 Edge Case Handling: If no trigrams are found that match the last two characters, the generation process appends "TH" to restart the process, ensuring that string generation doesn’t stop.
 
-Task 3: Analyze the Trigram Model
+**Task 3: Analyze the Trigram Model**
+
 Overview
 In Task 3, we analyze the 10,000-character string generated in Task 2 by comparing it to a list of valid English words from the words.txt file. This file contains a comprehensive list of English words, which we use to determine how many of the words in our generated string are actual English words.
 
