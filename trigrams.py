@@ -68,11 +68,11 @@ def build_trigram_model(text):
 
 # List of file paths for the five books, with correct filenames from the image
 book_files = [
-    '/workspaces/emerging_technologies/Task_1/Books/book1_paris.txt',
-    '/workspaces/emerging_technologies/Task_1/Books/book2_stranger_peoples_country.txt',
-    '/workspaces/emerging_technologies/Task_1/Books/book3_everybodys_business.txt',
-    '/workspaces/emerging_technologies/Task_1/Books/book4_cinderellas_prince.txt',
-    '/workspaces/emerging_technologies/Task_1/Books/book5_the_musgrave_controversy.txt'
+    '/workspaces/emerging_technologies/Books/book1_paris.txt',
+    '/workspaces/emerging_technologies/Books/book2_stranger_peoples_country.txt',
+    '/workspaces/emerging_technologies/Books/book3_everybodys_business.txt',
+    '/workspaces/emerging_technologies/Books/book4_cinderellas_prince.txt',
+    '/workspaces/emerging_technologies/Books/book5_the_musgrave_controversy.txt'
 ]
 
 # Loop through each book, process it, and print the first 100 characters
