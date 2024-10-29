@@ -120,6 +120,7 @@ Using a Set for Fast Lookup: We stored the valid words from words.txt in a Pytho
 Regular Expression for Word Extraction: The re.findall() function was used to extract words by matching sequences of alphabetic characters, ignoring any punctuation or special characters.
 
 **Task 4: Export the Trigram Model as JSON**
+
 The trigram model produced in Task 1 is exported as a JSON file in Task 4, which facilitates sharing, storing, and using the model in other programs. We will be able to retrieve our model in a standardized manner thanks to JSON (JavaScript Object Notation), a widely used and accessible data format.
 
 Structure and Files
