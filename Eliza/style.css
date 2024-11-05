@@ -1,0 +1,62 @@
+/* Basic styling for the entire page */
+body {
+    font-family: Arial, sans-serif; /* Sets the font style */
+    display: flex; /* Centers the container */
+    justify-content: center; /* Horizontally centers the container */
+    align-items: center; /* Vertically centers the container */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default body margin */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Main container styling */
+.container {
+    width: 100%;
+    max-width: 500px; /* Limits container width */
+    background: #ffffff; /* White background */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center-aligns text */
+}
+
+/* Styling for the chat history area */
+.chat-history {
+    height: 300px; /* Fixed height for overflow */
+    overflow-y: auto; /* Scroll when content overflows */
+    margin-bottom: 10px; /* Spacing below */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background: #f9f9f9; /* Light background for chat area */
+    text-align: left; /* Aligns chat text to the left */
+}
+
+/* Styling for input area containing the text box and button */
+.input-area {
+    display: flex; /* Aligns children in a row */
+    gap: 10px; /* Space between input and button */
+}
+
+/* Styles for the text input field */
+#user-input {
+    flex: 1; /* Expands to fill available space */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles for the "Send" button */
+#send-button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for the "Send" button */
+#send-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
