@@ -2,7 +2,7 @@
 
 **By Estevan Fernandez (g00410424@atu.ie)**
 
-Please find below more about each task:
+## Tasks
 
 **Task 1: Trigram Model Creation**
 
