@@ -84,7 +84,7 @@ function generateResponse(input) {
     } else {
         // Default fallback response for unmatched inputs
         const reflectedInput = reflect(input);
-        return `Why do you say "${reflectedInput}"?`;
+        return `I don't understand this word or sentence: "${reflectedInput}"?`;
     }
 }
 
