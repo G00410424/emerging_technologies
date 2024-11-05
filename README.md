@@ -183,13 +183,36 @@ The `sendMessage` function handles displaying user input and generating ELIZA's 
 
 Here are some of the common questions ELIZA can respond to:
 
-- **"hello", "hi", "hey"**: "Hello! How can I help you today?"
-- **"how are you", "how are you doing"**: "I'm just a computer program, but I'm here to help you."
-- **"what are you doing"**: "I'm here, ready to chat with you!"
-- **"what is your name", "who are you"**: "I'm ELIZA, your friendly chatbot assistant."
-- **"can you help me"**: "Of course! I'm here to help. What's on your mind?"
-- **"i am sad" or "i feel sad"**: "I'm sorry to hear that. Would you like to talk about it?"
-- **"why" questions**: "What do you think is stopping you?"
+- **"hello", "hi", "hey"**
+- **"how are you", "how are you doing", "how are you feeling"**
+- **"what are you doing"**
+- **"i feel"**
+- **"because"**
+- **"yes"**
+- **"no"**
+- **"you"**
+- **"what is your name", "who are you"**
+- **"how old are you"**
+- **"can you help me"**
+- **"i need"**
+- **"i want"**
+- **"why can't"**
+- **"tell me more"**
+- **"thank you", "thanks"**
+- **"bye", "goodbye"**
+- **"where are you from"**
+- **"what can you do"**
+- **"are you human"**
+- **"what is the meaning of life"**
+- **"do you have feelings", "are you alive"**
+- **"what's your purpose", "why are you here"**
+- **"do you like me"**
+- **"how can i be happy"**
+- **"i am sad", "i feel sad"**
+- **"i am stressed", "i feel stressed"**
+- **"do you understand me"**
+- **"can you keep a secret"**
+- **"do you dream"**
 
 The chatbot also includes responses for expressions of gratitude, questions about its "feelings," and existential inquiries like "what is the meaning of life."
 
