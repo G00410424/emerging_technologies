@@ -1,6 +1,6 @@
-// eliza.js - JavaScript file containing the chatbot logic
+// eliza.js - Contains the core chatbot logic
 
-// Reflection patterns for ELIZA's responses to mimic conversation
+// Reflection patterns for ELIZA responses
 const reflections = {
     "I am": "you are",
     "I": "you",
@@ -10,47 +10,66 @@ const reflections = {
     "your": "my"
 };
 
-// Function to reflect the user's input based on predefined patterns
+// Function to reflect user input
 function reflect(input) {
-    // Split the input into words and replace matching words based on 'reflections'
     return input.split(" ").map(word => reflections[word] || word).join(" ");
 }
 
-// Function to generate a response from ELIZA based on user input
+// Updated generateResponse function with keyword matching
 function generateResponse(input) {
-    // Apply reflection to create a response that feels more human-like
-    const reflectedInput = reflect(input);
-    return `Why do you say "${reflectedInput}"?`; // Simple response structure
+    // Convert input to lowercase for easier matching
+    const normalizedInput = input.toLowerCase();
+
+    // Basic keyword-based responses
+    if (normalizedInput.includes("hello") || normalizedInput.includes("hi")) {
+        return "Hello! How can I help you today?";
+    } else if (normalizedInput.includes("how are you")) {
+        return "I'm just a computer program, but I'm here to help you.";
+    } else if (normalizedInput.includes("i feel")) {
+        return "Why do you feel that way?";
+    } else if (normalizedInput.includes("because")) {
+        return "Is that the real reason?";
+    } else if (normalizedInput.includes("yes")) {
+        return "I see. Can you tell me more about that?";
+    } else if (normalizedInput.includes("no")) {
+        return "Why not?";
+    } else if (normalizedInput.includes("you")) {
+        return "We’re talking about you, not me.";
+    } else {
+        // Default fallback response for unmatched inputs
+        const reflectedInput = reflect(input);
+        return `Why do you say "${reflectedInput}"?`;
+    }
 }
 
-// Function to handle sending a message from the user
+// Function to handle sending a message
 function sendMessage() {
-    const userInput = document.getElementById("user-input"); // User input field
-    const chatHistory = document.getElementById("chat-history"); // Chat history display
+    const userInput = document.getElementById("user-input");
+    const chatHistory = document.getElementById("chat-history");
 
-    const userMessage = userInput.value.trim(); // Get and trim user input
-    if (userMessage === "") return; // Do nothing if input is empty
+    const userMessage = userInput.value.trim();
+    if (userMessage === "") return;
 
-    // Display user's message in chat history
+    // Display user's message
     chatHistory.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
 
-    // Generate ELIZA's response using the input
+    // Generate ELIZA's response
     const elizaMessage = generateResponse(userMessage);
     chatHistory.innerHTML += `<p><strong>ELIZA:</strong> ${elizaMessage}</p>`;
 
-    // Automatically scroll chat history to the latest message
+    // Scroll chat history to the bottom
     chatHistory.scrollTop = chatHistory.scrollHeight;
 
-    // Clear the input field after sending the message
+    // Clear input
     userInput.value = "";
 }
 
-// Event listener for "Enter" key press to trigger sending the message
+// Event listener for "Enter" key to send messages
 document.getElementById("user-input").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        sendMessage(); // Call sendMessage when Enter is pressed
+        sendMessage();
     }
 });
 
-// Event listener for the "Send" button to trigger sending the message
+// Event listener for "Send" button
 document.getElementById("send-button").addEventListener("click", sendMessage);
