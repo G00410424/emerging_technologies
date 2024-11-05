@@ -127,6 +127,15 @@ Structure and Files
 The trigram model in JSON format is contained in the output file trigrams.json, where each trigram sequence is represented by a key and its frequency by a value.
 The notebook that defines and runs the export function is called trigrams.ipynb.
 
+### References
+This project draws on concepts from natural language processing, statistical text modeling, and Python programming. The following resources and inspirations were used:
+
+1. **N-gram Modeling and Statistical Language Processing:** Manning, Christopher D., and Hinrich Schütze. Foundations of Statistical Natural Language Processing. MIT Press, 1999. This book provided foundational insights into n-gram language models, which underpin the trigram model in this project.
+2. **Python JSON Documentation:** Python Software Foundation. Python Standard Library Documentation: json module. Available at https://docs.python.org/3/library/json.html. The JSON documentation was referenced for exporting the trigram model to JSON format.
+3. **Regular Expressions in Python:** Python Software Foundation. re — Regular expression operations. Available at https://docs.python.org/3/library/re.html. The re module documentation helped guide the text-cleaning process.
+4. **Project Gutenberg:** Project Gutenberg Free eBook Collection. Available at https://www.gutenberg.org/. Texts from Project Gutenberg were used as the source material for constructing the trigram model.
+5. **Random Sampling and Weighted Choice:** Random.choices() Function. Python Standard Library Documentation. Available at https://docs.python.org/3/library/random.html. Documentation on random.choices() was referenced for weighted random selection in generating text sequences based on the trigram model.
+
 ---
 
 ## ELIZA Chatbot Project
