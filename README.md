@@ -126,3 +126,71 @@ The trigram model produced in Task 1 is exported as a JSON file in Task 4, which
 Structure and Files
 The trigram model in JSON format is contained in the output file trigrams.json, where each trigram sequence is represented by a key and its frequency by a value.
 The notebook that defines and runs the export function is called trigrams.ipynb.
+
+---
+
+## ELIZA Chatbot Project
+
+### Overview
+
+This project is an implementation of the classic **ELIZA chatbot**, which simulates conversation by recognizing keywords in user input and providing responses based on those keywords. ELIZA was originally created as an early experiment in natural language processing. In this implementation, the chatbot is designed to provide basic conversational responses based on predefined patterns and reflections of user input.
+
+The chatbot is built using **HTML**, **CSS**, and **JavaScript** and is designed to run entirely on the client side.
+
+### Features
+
+- **Keyword-based Responses**: The chatbot can recognize specific words or phrases in user input and respond accordingly. Common conversational phrases like "hello," "how are you," "I feel," and "thank you" have unique responses.
+- **Reflected Responses**: For unmatched phrases, the chatbot reflects user input, providing an engaging fallback response.
+- **Dynamic Interaction**: The bot simulates conversation by generating responses based on the keywords in user input and even encourages users to elaborate on their thoughts.
+
+### Files and Structure
+
+- **eliza/** - The main folder containing the project files.
+  - `index.html` - The HTML file defining the chatbot's structure and interface.
+  - `style.css` - CSS file for styling the chatbot interface.
+  - `eliza.js` - JavaScript file containing the logic for the chatbot, including responses and event handling.
+
+### JavaScript Logic
+
+The chatbot's logic is implemented in `eliza.js`. This file contains the following key components:
+
+#### 1. Reflection Patterns
+
+ELIZA uses reflection patterns to "reflect" words back to the user in responses. For example:
+- **User says**: "I am feeling sad"
+- **ELIZA responds**: "Why do you say you are feeling sad?"
+
+The reflection patterns help make responses feel more personal.
+
+#### 2. `generateResponse` Function
+
+The `generateResponse` function generates replies based on keywords in the user's input. It includes common questions and conversational phrases such as "hello," "how are you," and "can you help me."
+
+#### 3. User Interaction and Message Handling
+
+The `sendMessage` function handles displaying user input and generating ELIZA's response. When the user submits a message, `sendMessage` updates the chat history and scrolls to the latest message.
+
+### Possible Questions and Responses
+
+Here are some of the common questions ELIZA can respond to:
+
+- **"hello", "hi", "hey"**: "Hello! How can I help you today?"
+- **"how are you", "how are you doing"**: "I'm just a computer program, but I'm here to help you."
+- **"what are you doing"**: "I'm here, ready to chat with you!"
+- **"what is your name", "who are you"**: "I'm ELIZA, your friendly chatbot assistant."
+- **"can you help me"**: "Of course! I'm here to help. What's on your mind?"
+- **"i am sad" or "i feel sad"**: "I'm sorry to hear that. Would you like to talk about it?"
+- **"why" questions**: "What do you think is stopping you?"
+
+The chatbot also includes responses for expressions of gratitude, questions about its "feelings," and existential inquiries like "what is the meaning of life."
+
+---
+
+### References
+
+This project is based on the original ELIZA concept by Joseph Weizenbaum and follows the principles of keyword-based pattern matching. The following resources and inspirations were used:
+
+1. **Original ELIZA Paper**: Weizenbaum, Joseph. "ELIZA—a computer program for the study of natural language communication between man and machine." _Communications of the ACM_ 9.1 (1966): 36-45.
+2. **Reflection Patterns**: Reflection techniques were inspired by pattern-matching approaches used in basic AI systems for generating conversational responses.
+3. **JavaScript and HTML Documentation**: Mozilla Developer Network (MDN) Web Docs. _JavaScript_ and _HTML_ for structuring and styling the chatbot interface.
+4. **JavaScript Event Handling**: JavaScript documentation on MDN was used to implement and understand event listeners for interactive elements such as the input box and send button.
