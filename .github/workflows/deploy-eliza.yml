@@ -1,12 +1,10 @@
 name: Deploy ELIZA to GitHub Pages
 
 on:
-  # Triggers the workflow on push or pull request events for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  # Allows manual triggering of the workflow
   workflow_dispatch:
 
 jobs:
@@ -14,13 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Deploy only the eliza folder to GitHub Pages
       - name: Deploy ELIZA folder
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./eliza
+          publish_branch: gh-pages
