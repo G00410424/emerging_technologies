@@ -1,0 +1,4 @@
+# Core dependencies for the project
+matplotlib==3.9.2  # Plotting graphs
+numpy==2.1.1  # Numerical computations
+pandas==2.2.3  # Data manipulation and analysis
